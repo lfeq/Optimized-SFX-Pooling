@@ -1,0 +1,7 @@
+{
+  "name": "com.lorenz.AudioSystem",
+  "version": "1.0.0",
+  "displayName": "Audio System",
+  "description": "Audio System based on the video from git-amend",
+  "unity": "2022.3"
+}
