@@ -4,7 +4,6 @@ using UnityEngine.Pool;
 
 namespace AudioSystem {
     public class SoundManager : PersistentSingleton<SoundManager> {
-        [SerializeField] private SoundEmitter soundEmitterPrefab;
         [SerializeField] private bool collectionCheck = true;
         [SerializeField] private int defaultCapacity = 10;
         [SerializeField] private int maxPoolSize = 100;
@@ -65,7 +64,8 @@ namespace AudioSystem {
         }
 
         private SoundEmitter createSoundEmitter() {
-            SoundEmitter soundEmitter = Instantiate(soundEmitterPrefab);
+            //SoundEmitter soundEmitter = Instantiate(soundEmitterPrefab);
+            SoundEmitter soundEmitter = new GameObject("Sound Emitter").AddComponent<SoundEmitter>();
             soundEmitter.gameObject.SetActive(false);
             return soundEmitter;
         }
